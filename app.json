@@ -1,17 +1,26 @@
 {
   "expo": {
-    "name": "smart_report_app",
-    "slug": "smart_report_app",
+    "name": "Smart Report",
+    "slug": "smart-report-pages",
     "version": "1.0.0",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "smartreport",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.nikhildubey.smartreportpages",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
+      "package": "com.nikhildubey.smartreportpages",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#EEF3F9",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -20,6 +29,25 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#EEF3F9",
+          "image": "./assets/splash-logo.png",
+          "imageWidth": 200
+        }
+      ]
+    ],
+    "owner": "nikhil-team",
+    "extra": {
+      "eas": {
+        "projectId": "3a917b35-b9ab-4d08-8952-fb4b2cd3dcda"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/3a917b35-b9ab-4d08-8952-fb4b2cd3dcda"
     }
   }
 }
