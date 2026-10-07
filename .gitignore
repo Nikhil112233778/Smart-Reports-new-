@@ -39,3 +39,7 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# report pages: built by report/build.py from index.src.html
+report/index.html
+report/preview.html

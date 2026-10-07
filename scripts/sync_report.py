@@ -1,14 +1,14 @@
 """Pack the Smart Report mockup into the app.
 
-Reads the built mockup (~/smart_report_revamp/mockup/preview.html, made by its build.py), swaps the Google Fonts
+Reads the built report pages (report/preview.html, made by report/build.py), swaps the Google Fonts
 link for the Poppins files themselves (saved once in assets/fonts, so the app works offline), and writes
-src/reportHtml.ts, which App.tsx shows full screen. Run it after every mockup change, then ship with
+src/reportHtml.ts, which App.tsx shows full screen. Run it after every report change, then ship with
 `npx eas-cli update --branch production --environment production --message "..."`.
 """
 import base64, json, os, re, urllib.request
 
 APP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MOCKUP = os.path.expanduser('~/smart_report_revamp/mockup/preview.html')
+MOCKUP = os.path.join(APP, 'report', 'preview.html')
 FONTS = os.path.join(APP, 'assets', 'fonts')
 WEIGHTS = [400, 500, 600, 700, 800]
 UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36'
