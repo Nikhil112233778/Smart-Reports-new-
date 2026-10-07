@@ -27,7 +27,8 @@
   "submit": {
     "production": {
       "ios": {
-        "appName": "Smart Report by Habit"
+        "appName": "Smart Report by Habit",
+        "ascAppId": "6819632023"
       }
     }
   }
